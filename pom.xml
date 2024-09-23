@@ -8,9 +8,9 @@
 		<version>2.7.18</version>
 	</parent>
 	<groupId>com.kg</groupId>
-	<artifactId>modem-zyxel-c300z</artifactId>
+	<artifactId>modem-zyxel-c3000z</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>modem-zyxel-c300z</name>
+	<name>modem-zyxel-c3000z</name>
 	<url/>
 	<scm>
 		<connection/>

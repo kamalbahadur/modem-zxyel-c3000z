@@ -18,10 +18,6 @@ import javax.jmdns.ServiceInfo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * Class Description goes here.
- * Created by kbahadur on 9/23/24
- */
 @Component
 public class MdnsUtility {
     @Value("${server.port}")

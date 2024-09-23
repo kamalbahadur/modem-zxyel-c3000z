@@ -14,10 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Class Description goes here.
- * Created by kbahadur on 9/22/24
- */
 @Component
 public class ConnectionHandler {
     @Autowired RestTemplate restTemplate;

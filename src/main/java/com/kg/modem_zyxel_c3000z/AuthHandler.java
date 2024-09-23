@@ -18,10 +18,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Class Description goes here.
- * Created by kbahadur on 9/22/24
- */
 @Component
 public class AuthHandler {
 
