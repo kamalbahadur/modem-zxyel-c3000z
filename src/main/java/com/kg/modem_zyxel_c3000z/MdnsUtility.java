@@ -1,13 +1,7 @@
-/*
- * Copyright (c) 2024 Nextiva, Inc. to Present.
- * All rights reserved.
- */
-
 package com.kg.modem_zyxel_c3000z;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.PostConstruct;
