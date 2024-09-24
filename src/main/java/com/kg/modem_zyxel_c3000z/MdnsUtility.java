@@ -25,8 +25,7 @@ public class MdnsUtility {
         jmdns = JmDNS.create(InetAddress.getLocalHost());
 
         // Register a service
-        ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "Zyxel C3000Z", 80,
-                "Way to connect and disconnect internet");
+        ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "Zyxel C3000Z", 80, "");
         Map<String, String> properties = new HashMap<>();
         properties.put("http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/connect", "");
         properties.put("http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/disconnect", "");
