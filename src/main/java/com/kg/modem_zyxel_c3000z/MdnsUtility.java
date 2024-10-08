@@ -17,6 +17,9 @@ public class MdnsUtility {
     @Value("${server.port}")
     String serverPort;
 
+    @Value("${spring.application.name}")
+    String applicationName;
+
     private JmDNS jmdns;
 
     @PostConstruct
@@ -25,10 +28,11 @@ public class MdnsUtility {
         jmdns = JmDNS.create(InetAddress.getLocalHost());
 
         // Register a service
-        ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "Zyxel C3000Z", 80, "");
+        ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", applicationName,
+                Integer.parseInt(serverPort), "");
         Map<String, String> properties = new HashMap<>();
-        properties.put("http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/connect", "");
-        properties.put("http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/disconnect", "");
+        properties.put("connect", "http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/connect");
+        properties.put("disconnect", "http://" + InetAddress.getLocalHost().getHostAddress() + ":" + serverPort + "/disconnect");
         serviceInfo.setText(properties);
         jmdns.registerService(serviceInfo);
     }

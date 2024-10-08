@@ -23,7 +23,7 @@ public class ModemController {
     @Value("${modem.password}")
     private String password;
 
-    @GetMapping("/disconnect =")
+    @GetMapping("/disconnect")
     public String disconnect() {
         String sessionId = authHandler.login(host, port, username, password);
         boolean disconnected = connectionHandler.disconnect(sessionId);
@@ -35,7 +35,7 @@ public class ModemController {
     }
 
 
-    @GetMapping("/connect =")
+    @GetMapping("/connect")
     public String connect() {
         String sessionId = authHandler.login(host, port, username, password);
         boolean connected = connectionHandler.connect(sessionId);
